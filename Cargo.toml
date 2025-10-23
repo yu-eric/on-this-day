@@ -1,6 +1,6 @@
 [package]
 name = "on-this-day"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "A CLI tool to fetch a historical event for the current day from Wikipedia."
 license = "MIT"

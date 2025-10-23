@@ -1,0 +1,73 @@
+# On This Day CLI
+
+A simple command-line tool that fetches historical events for the current date from Wikipedia's "On this day" API. Get interesting facts about what happened on this day in history!
+
+## Features
+
+- Fetches real-time data from Wikipedia's "On this day" API
+- Filter events by type (all, selected, births, deaths, holidays, events)
+- Display oldest or newest events, or get a random selection
+
+## Installation
+
+Make sure you have Rust installed on your system. Then clone and build the project:
+
+```bash
+git clone <repository-url>
+cd on-this-day
+cargo build --release
+```
+
+## Usage
+
+Run the application with:
+
+```bash
+cargo run
+```
+
+Or after building:
+
+```bash
+./target/release/on-this-day
+```
+
+### Command Line Options
+
+#### Flags
+
+- `-o, --oldest`: Display the oldest event for today (conflicts with `--newest`)
+- `-n, --newest`: Display the newest event for today (conflicts with `--oldest`)
+- `-h, --help`: Print help information
+- `-V, --version`: Print version information
+
+#### Event Type Filter
+
+- `-t, --event-type <TYPE>`: Filter by event type
+
+Available event types:
+- `all` (default): Shows events from all categories
+- `selected`: Curated selection of notable events
+- `births`: Notable births that occurred on this day
+- `deaths`: Notable deaths that occurred on this day
+- `holidays`: Holidays and observances
+- `events`: General historical events
+
+## Dependencies
+
+This project uses the following Rust crates:
+
+- `reqwest` - HTTP client for API requests
+- `serde` & `serde_json` - JSON serialization/deserialization
+- `tokio` - Async runtime
+- `chrono` - Date and time handling
+- `clap` - Command-line argument parsing
+- `rand` - Random selection of events
+
+## API
+
+This tool uses the [Wikimedia REST API](https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/) to fetch historical events. The API is free to use and doesn't require authentication, but the application includes a proper User-Agent header as required by Wikipedia's policies.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
