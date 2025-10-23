@@ -1,0 +1,29 @@
+[package]
+name = "on-this-day"
+version = "0.1.0"
+edition = "2021"
+description = "A CLI tool to fetch a historical event for the current day from Wikipedia."
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# For making HTTP requests to the Wikipedia API
+reqwest = { version = "0.12", features = ["json"] }
+
+# For deserializing the JSON response from the API
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# For getting the current date
+chrono = "0.4"
+
+# For parsing command-line arguments
+clap = { version = "4.5", features = ["derive"] }
+
+# For selecting a random event
+rand = "0.8"
+
