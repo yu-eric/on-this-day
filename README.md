@@ -1,7 +1,15 @@
 # On This Day CLI
-[![Crates.io][https://img.shields.io/crates/v/on-this-day]][https://crates.io/crates/on-this-day]
 
 A simple command-line tool that fetches historical events for the current date from Wikipedia's "On this day" API. Get interesting facts about what happened on this day in history!
+
+[![Crates.io][crates-badge]][crates-url]
+[![MIT licensed][mit-badge]][mit-url]
+
+[crates-badge]:https://img.shields.io/crates/v/on-this-day.svg 
+[crates-url]: https://crates.io/crates/on-this-day
+[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[mit-url]: https://github.com/yu-eric/on-this-day/blob/main/LICENSE
+
 
 ## Features
 
